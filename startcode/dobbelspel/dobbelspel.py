@@ -1,1 +1,2 @@
-# Plaats hierin de functie dobbel
+import random
+

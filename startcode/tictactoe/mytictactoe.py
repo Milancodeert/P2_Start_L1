@@ -9,25 +9,38 @@ def initialiseer_bord():
     return bord
 
 
-def zet():
-    pass
+def zet(bord, rij, kollom, huidige_speler):
+    bord[rij][kollom] = huidige_speler
+    return bord
 
 
 def print_bord(bord):
-    pass
+    print(" ")
+    for rij in bord:
+        print('|'.join(rij))
 
 
 def controleer_winnaar(bord):
-    pass
+    if controleer_horizontaal(bord) or controleer_diagonaal(bord):
+        return True
+    else:
+        return False
 
 
 def controleer_horizontaal(bord):
-    pass
+    for rij in bord:
+        if rij[0] == rij[1] == rij[2] != ' ':
+            return True
+    return False
 
 
 def controleer_verticaal(bord):
-    pass
+    for kolom in range(0):
+        if bord[0][kolom] == bord[1][kolom] == bord[2][kolom] != ' ':
+            return True
+    return False
 
 
 def controleer_diagonaal(bord):
     pass
+
